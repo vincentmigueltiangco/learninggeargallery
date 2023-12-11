@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Learning-Gear-Gallery</title>
+  <!--Favicon-->
+  <link rel="icon" href="/img/icon.ico" type="image/x-icon">
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu:ital@0;1&display=swap"
+    rel="stylesheet">
+  <!--fontawesome -->
+  <script src="https://kit.fontawesome.com/cc5e355fff.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a37586c1fd.js" crossorigin="anonymous"></script>
+  <!--bootstraps-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="cart.js" async></script>
+  <script src="top.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<script>
+  function randomQuote() {
+    let getQuote = () => {
+      fetch("https://api.quotable.io/quotes/random?maxLength=70").then(data => data.json()).then(item => {
+        document.getElementById('cta-heading').textContent += `"${item[0].content}" - ${item[0].author}`
+
+      })
+    }
+    getQuote();
+  }
+
+</script>
+
+<body onload="randomQuote()">
+  <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
+  <section id="title">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-dark ">
+        <a class="navbar-brand" href="#">
+          <img class="logo"
+            src="https://th.bing.com/th/id/OIG.D8TJTNcXIFTDd7SrT6HI?pid=ImgGn"
+            alt="Avatar">
+        </a>
+        <span class="navbar-brand" href="">Learning Gear Gallery</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+
+
+              <a class="nav-link" id="col" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="#pricing">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="#testimonials">Interior</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="login.html">Login</a>
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="title">
+            <span class="title-word" id="title-word1">Educate,</span>
+            <span class="title-word" id="title-word2">Create,</span>
+            <span class="title-word" id="title-word3">Excel:</span>
+            <span class="title-word" id="title-word4">Your</span>
+            <span class="title-word" id="title-word5">School</span>
+            <span class="title-word" id="title-word6">Supply</span>
+            <span class="title-word" id="title-word7">Source</span>
+            <span class="title-word" id="title-word8">Unleashed!</span>
+
+          </h1>
+          <div class="typed-out">
+            <h6 style="color: #fff;">We provide you with the best supply in the nation</h6>
+          </div>
+          <button id="but" type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
+            Download</button>
+          <button id="but1" type="button" class="btn btn-outline-light btn-lg download-button"><i
+              class="fab fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-image" src="https://clipart-library.com/img/1162983.png"
+            alt="coffee-cup-icon">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="features">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="feature-card">
+            <i class="icon fas fa-check-circle fa-4x"></i>
+            <h3>Quality Assured</h3>
+            <p>Best quality supply in the nation.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card">
+            <i class="icon fas fa-smile-beam fa-4x"></i>
+            <h3>Happy Shopping</h3>
+            <p>Friendly Staff</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card">
+            <i class="icon fas fa-heart fa-4x"></i>
+            <h3>Instagramable Place</h3>
+            <p>You would love it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+    <h2 class=" text-center">Shop Interior</h2>
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="3000">
+
+          <img class="testimonial-image"
+            src="https://2.bp.blogspot.com/-yo5fp_Kaj9w/VaWYFSbAvZI/AAAAAAAAWlM/WvfoRxdnQZ8/s1600/school%2Bsupplies.jpg" alt="cafe1"><br>
+          <em>PEN AREA</em>
+        </div>
+        <div class="carousel-item" data-interval="3000">
+
+          <img class="testimonial-image"
+            src="https://cdn.corporate.walmart.com/dims4/WMT/1eea3d3/2147483647/strip/true/crop/5760x3840+0+0/resize/5760x3840!/quality/90/?url=https:%2F%2Fcdn.corporate.walmart.com%2Ff3%2Feb%2F08412c3542059ff6e04d19d749ee%2Fback-to-school-2014-a-kid-shops-for-school-supplies.jpg"
+            alt="cafe2"><br>
+          <em>SCISSOR AREA</em>
+        </div>
+        <div class="carousel-item" data-interval="3000">
+
+          <img class="testimonial-image"
+            src="https://cronkitenews.asu.edu/assets/images/14/08/01-shop-shelves-full.jpg" alt="cafe3"><br>
+          <em>OTHER PRODUCT</em>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-target="#testimonial-carousel" data-slide="prev">
+        <span class="coffee-cup-icon"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#testimonial-carousel" data-slide="next">
+        <span class="coffee-cup-icon"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <h2>Menu</h2>
+    <p>Simple and affordable prices.</p>
+
+
+    <div class="row">
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>PENCIL</h3>
+            </span>
+          </div>
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://www.positivepromotions.com/images/1000/PLP-16.jpg" style="max-width: 100%;">
+          </div>
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱50</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>BALLPEN</h3>
+            </span>
+          </div>
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://i.pinimg.com/originals/90/28/81/9028810b03c29f565905379e907231a4.jpg"
+              style="max-width: 100%;">
+          </div>
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱65</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>MARKER</h3>
+            </span>
+          </div>
+          <div class="card-body">
+
+            <img class="card-image shop-item-image"
+              src="https://www.umarkers.com/Umark-Files/Product-Images/Paint-Markers/100P-Fine-Line-Images/100P-FL-Colors/100PFL_Violet_10212.jpg"
+              style="max-width: 100%;">
+
+
+          </div>
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱30</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title ">
+              <h3>SCISSOR</h3>
+            </span>
+          </div>
+          <div class="card-body">
+
+            <img class="card-image shop-item-image"
+              src="https://i5.walmartimages.com/asr/eca08274-cd38-414b-b784-63a3109f9f88_1.5fa85aa24eb439148af024d9154ec78d.jpeg"
+              style="max-width: 100%;">
+
+
+          </div>
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱105</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>NOTEBOOK</h3>
+            </span>
+          </div>
+          <div class="card-body">
+
+            <img class="card-image shop-item-image"
+              src="https://dm61q01mhxuli.cloudfront.net/images/e104/image2/77076-24.jpg"
+              style="max-width: 100%;">
+
+
+          </div>
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱80</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>CRAYONS</h3>
+            </span>
+          </div>
+          <div class="card-body">
+
+            <img class="card-image shop-item-image"
+              src="https://content.oppictures.com/Master_Images/Master_Variants/Variant_1500/305873.jpg"
+              style="max-width: 100%;">
+
+
+          </div>
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱70</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <br>
+        <br>
+
+
+      </div>
+
+      <section class="container content-section">
+        <hr>
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+          <div class="cart-row">
+            <div class="cart-item cart-column">
+              <img class="cart-item-image"
+                src="https://coffeeatthree.com/wp-content/uploads/0420-cold-brew-coffee-010.jpg" width="100px"
+                height="100px">
+              <span class="cart-item-title">PENCIL</span>
+            </div>
+            <span class="cart-price cart-column">₱50</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="1">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+          </div>
+          <div class="cart-row">
+            <div class="cart-item cart-column">
+              <img class="cart-item-image"
+                src="https://www.adityabirlacapital.com/healthinsurance/active-together/wp-content/uploads/2019/12/How-Are-Espressos-Good-For-Health_blog_lower_1.png"
+                width="100px" height="100px">
+              <span class="cart-item-title">BALLPEN</span>
+            </div>
+            <span class="cart-price cart-column">₱65</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="1">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+          </div>
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+        </div>
+        <div class="cart-total-main-price">
+          <span class="cart-total-price">₱115</span>
+        </div>
+
+    </div>
+    <center>
+
+      <button onclick="window.location.href='payment.html'" class="payment btn btn-dark btn-lg download-button"
+        type="button">Payment</button>
+
+    </center>
+
+
+  </section>
+
+
+  <section id="cta">
+
+    <h3 class="cta-heading" id="cta-heading"></h3>
+
+    <br><br><br>
+  </section>
+
+  <section class="container content-section">
+    <hr>
+    <h2 class="section-header">PARTNERS</h2>
+    <p>Learnin gGear Gallery wanted to express my sincere gratitude for our partnership. Your collaboration and dedication are truly appreciated. Together, we've achieved success, and I look forward to our continued growth.</p>
+    <section id="press">
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://www.filgifts.com/images/product/big/National-Bookstore-GC.jpg" alt="National Bookstore">
+        </div>
+        <div class="overlay">
+          <p>Sponsor: National Bookstore</p>
+        </div>
+      </div>
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://guiaimpresion.com/wp-content/uploads/2020/06/Logotipo-Amazon.jpg" alt="Amazon Global">
+        </div>
+        <div class="overlay">
+          <p>Sponsor: Amazon Global</p>
+        </div>
+      </div>
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://logos-world.net/wp-content/uploads/2020/11/eBay-Emblem.png" alt="eBay">
+        </div>
+        <div class="overlay">
+          <p>Sponsor: eBay</p>
+        </div>
+      </div>
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://cdn.freebiesupply.com/logos/thumbs/2x/staples-1-logo.png" alt="Staples">
+        </div>
+        <div class="overlay">
+          <p>Sponsor: Staples</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="contact">
+      <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button minimize align-ico" style="background: crimson;"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
+                </div>
+                <img class="logo" style="margin-top: 50px;"
+                  src="https://th.bing.com/th/id/OIG.D8TJTNcXIFTDd7SrT6HI?pid=ImgGn"
+                  width="100" height="100" alt="Avatar">
+                <div class="app-contact"></div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="NAME" value="">
+                  </div>
+                  <div class="app-form-group">
+                    <input type="email" class="app-form-control" placeholder="EMAIL">
+                  </div>
+                  <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="SUBJECT">
+                  </div>
+                  <div class="app-form-group message">
+                    <input type="text" class="app-form-control" placeholder="MESSAGE">
+                  </div>
+                  <div class="app-form-group-buttons">
+                    <button class="app-form-button">CANCEL</button>
+                    <button class="app-form-button">SEND</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <div class="d-flex justify-content-between">
+      <div>
+        <a class="navbar-brand" href="#">
+          <img class="logo"
+            src="https://th.bing.com/th/id/OIG.D8TJTNcXIFTDd7SrT6HI?pid=ImgGn"
+            alt="Avatar">
+            Learning Gear Gallery
+        </a>
+      </div>
+      <div class="social-media-icons">
+        <a href="https://www.facebook.com/" target="blank"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/" target="blank"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+        <a href="https://twitter.com/" target="blank"><i class="social-icon fab fa-x-twitter fa-2x"></i></a>
+        <a href="#"><i class="social-icon fas fa-envelope fa-2x"></i></a>
+      </div>
+    </div>
+    <div class="copyright text-center">©2023 Learning Gear Gallery | All Rights Reserved</div>
+
+    </footer>
+
+  <!--    Bootstrap js files-->
+  <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </head>
+</body>
+
+</html>
